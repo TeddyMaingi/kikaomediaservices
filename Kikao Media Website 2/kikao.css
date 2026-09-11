@@ -1,0 +1,2969 @@
+/* =========================================
+   KIKAO MEDIA SERVICES
+   MAIN STYLESHEET
+========================================= */
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    /* Kikao Brand Colors */
+    --primary-color: #01045d;
+    --accent-color: #ff4500;
+
+    /* Supporting Colors */
+    --text-color: #01045d;
+    --muted-color: #555555;
+    --background-color: #ffffff;
+    --border-color: #e8e8e8;
+
+    /* Layout */
+    --max-width: 1400px;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    width: 100%;
+    background: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+
+    position: relative;
+    z-index: 1000;
+}
+
+.header-container {
+    width: min(100% - 60px, var(--max-width));
+    min-height: 90px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    color: var(--primary-color);
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+    white-space: nowrap;
+
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.logo:hover {
+    color: var(--accent-color);
+}
+
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.desktop-nav a {
+    color: var(--primary-color);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.desktop-nav a:hover {
+    color: var(--accent-color);
+}
+
+
+/* Contact CTA */
+
+.desktop-nav .contact-link {
+    color: #ffffff;
+    background: var(--accent-color);
+
+    padding: 11px 18px;
+
+    border-radius: 2px;
+
+    transition:
+        background 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.desktop-nav .contact-link:hover {
+    color: #ffffff;
+    background: var(--primary-color);
+    opacity: 1;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    background: transparent;
+
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.menu-button span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: var(--primary-color);
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+.mobile-nav {
+    display: none;
+
+    width: 100%;
+
+    padding: 15px 30px 25px;
+
+    background: var(--background-color);
+
+    border-top: 1px solid var(--border-color);
+}
+
+.mobile-nav a {
+    display: block;
+
+    padding: 14px 0;
+
+    color: var(--primary-color);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border-bottom: 1px solid var(--border-color);
+
+    transition: color 0.25s ease;
+}
+
+.mobile-nav a:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav a:hover {
+    color: var(--accent-color);
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: var(--background-color);
+}
+
+.hero-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 300px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats {
+    width: 100%;
+
+    background: var(--background-color);
+}
+
+.stats-container {
+    width: min(100% - 60px, var(--max-width));
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* Individual statistic */
+
+.stat-item {
+    min-height: 170px;
+
+    padding: 40px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-right: 1px solid var(--accent-color);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+
+/* =========================================
+   STAT NUMBER
+========================================= */
+
+.stat-number {
+    color: var(--primary-color);
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================
+   STAT LABEL
+========================================= */
+
+.stat-label {
+    margin-top: 8px;
+
+    color: var(--muted-color);
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   NEXT SECTION
+========================================= */
+
+.next-section {
+    padding: 120px 30px;
+
+    background: var(--background-color);
+}
+
+.section-container {
+    width: min(100%, 900px);
+
+    margin: 0 auto;
+}
+
+
+/* Eyebrow */
+
+.section-eyebrow {
+    margin-bottom: 15px;
+
+    color: var(--accent-color);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* Main heading */
+
+.section-container h2 {
+    margin-bottom: 20px;
+
+    color: var(--primary-color);
+
+    font-size: clamp(36px, 6vw, 72px);
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    line-height: 1.05;
+}
+
+
+/* Section paragraph */
+
+.section-container > p:last-child {
+    max-width: 650px;
+
+    color: var(--muted-color);
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .desktop-nav {
+        gap: 18px;
+    }
+
+    .desktop-nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .header-container {
+        width: min(100% - 40px, var(--max-width));
+    }
+
+    .stats-container {
+        width: min(100% - 40px, var(--max-width));
+    }
+
+    .stat-item {
+        padding: 35px 20px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    /* Header */
+
+    .header-container {
+        min-height: 75px;
+
+        width: calc(100% - 40px);
+    }
+
+    .logo {
+        font-size: 20px;
+
+        letter-spacing: -0.6px;
+    }
+
+
+    /* Hide desktop navigation */
+
+    .desktop-nav {
+        display: none;
+    }
+
+
+    /* Show mobile button */
+
+    .menu-button {
+        display: flex;
+    }
+
+
+    /* Hero */
+
+    .hero-image {
+        min-height: 220px;
+
+        object-fit: cover;
+    }
+
+
+    /* Statistics */
+
+    .stats-container {
+        width: 100%;
+
+        display: block;
+    }
+
+    .stat-item {
+        min-height: auto;
+
+        padding: 30px 25px;
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--accent-color);
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-number {
+        font-size: 38px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+    }
+
+
+    /* Next section */
+
+    .next-section {
+        padding: 80px 25px;
+    }
+
+    .section-container h2 {
+        letter-spacing: -2px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 450px) {
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .header-container {
+        width: calc(100% - 30px);
+    }
+
+    .mobile-nav {
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+    .hero-image {
+        min-height: 190px;
+    }
+
+    .stat-item {
+        padding: 27px 20px;
+    }
+
+    .stat-number {
+        font-size: 34px;
+    }
+
+    .next-section {
+        padding: 70px 20px;
+    }
+
+}
+
+/* =========================================
+   KIKAO MEDIA SERVICES
+   ABOUT PAGE STYLING
+========================================= */
+
+
+/* =========================================
+   GLOBAL ABOUT PAGE CONTAINERS
+========================================= */
+
+.about-container,
+.content-container,
+.media-container,
+.cta-container {
+    width: min(100% - 60px, 1200px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   WHO WE ARE
+========================================= */
+
+.about-intro {
+    padding: 130px 0 140px;
+    background: #ffffff;
+}
+
+.about-container {
+    max-width: 1100px;
+}
+
+.about-intro .section-eyebrow {
+    margin-bottom: 24px;
+}
+
+.about-intro h1 {
+    max-width: 1050px;
+
+    margin-bottom: 40px;
+
+    color: var(--primary-color);
+
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 800;
+
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.about-intro p {
+    max-width: 800px;
+
+    margin-bottom: 22px;
+
+    color: var(--muted-color);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-intro .lead-text {
+    max-width: 850px;
+
+    margin-bottom: 28px;
+
+    color: var(--primary-color);
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   WHAT WE DO
+========================================= */
+
+.what-we-do {
+    padding: 130px 0 150px;
+
+    background: #f7f7f7;
+}
+
+.what-we-do h2,
+.our-approach h2,
+.why-kikao h2 {
+    max-width: 900px;
+
+    margin-bottom: 65px;
+
+    color: var(--primary-color);
+
+    font-size: clamp(40px, 5.5vw, 70px);
+    font-weight: 800;
+
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+
+/* =========================================
+   SERVICE CARDS
+========================================= */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.about-service {
+    min-height: 520px;
+
+    padding: 42px 38px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-service:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--accent-color);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Service number */
+
+.service-number {
+    display: block;
+
+    margin-bottom: 35px;
+
+    color: var(--accent-color);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* Service heading */
+
+.about-service h3 {
+    margin-bottom: 25px;
+
+    color: var(--primary-color);
+
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+
+/* Service paragraphs */
+
+.about-service p {
+    margin-bottom: 18px;
+
+    color: var(--muted-color);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* Value section */
+
+.value-label {
+    margin-top: auto;
+    margin-bottom: 8px;
+
+    color: var(--accent-color);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.about-service .value-text {
+    margin-bottom: 0;
+
+    color: var(--primary-color);
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   OUR MEDIA
+========================================= */
+
+.our-media {
+    padding: 150px 0;
+
+    background: #ffffff;
+}
+
+.media-container {
+    max-width: 1000px;
+}
+
+.our-media .section-eyebrow {
+    margin-bottom: 24px;
+}
+
+.our-media h2 {
+    max-width: 900px;
+
+    margin-bottom: 45px;
+
+    color: var(--primary-color);
+
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 800;
+
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.our-media p {
+    max-width: 780px;
+
+    margin-bottom: 22px;
+
+    color: var(--muted-color);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.our-media .lead-text {
+    max-width: 850px;
+
+    margin-bottom: 32px;
+
+    color: var(--primary-color);
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   OUR APPROACH
+========================================= */
+
+.our-approach {
+    padding: 140px 0 160px;
+
+    background: #f7f7f7;
+}
+
+.our-approach h2 {
+    margin-bottom: 65px;
+}
+
+
+/* Approach cards */
+
+.approach-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.approach-item {
+    min-height: 350px;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.approach-item:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--accent-color);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.approach-number {
+    display: block;
+
+    margin-bottom: 40px;
+
+    color: var(--accent-color);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.approach-item h3 {
+    margin-bottom: 8px;
+
+    color: var(--primary-color);
+
+    font-size: 30px;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+.approach-item h4 {
+    margin-bottom: 22px;
+
+    color: var(--primary-color);
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.approach-item p {
+    color: var(--muted-color);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   WHY KIKAO
+========================================= */
+
+.why-kikao {
+    padding: 150px 0;
+
+    background: #ffffff;
+}
+
+.why-kikao h2 {
+    margin-bottom: 70px;
+}
+
+
+/* Why cards */
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.why-item {
+    padding: 40px;
+
+    border: 1px solid #e5e5e5;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.why-item:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent-color);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.why-number {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: var(--accent-color);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.why-item h3 {
+    margin-bottom: 15px;
+
+    color: var(--primary-color);
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.why-item p {
+    max-width: 500px;
+
+    color: var(--muted-color);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.about-cta {
+    padding: 150px 0;
+
+    background: var(--primary-color);
+
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 900px;
+}
+
+.about-cta .section-eyebrow {
+    margin-bottom: 25px;
+
+    color: var(--accent-color);
+}
+
+.about-cta h2 {
+    margin-bottom: 25px;
+
+    color: #ffffff;
+
+    font-size: clamp(45px, 7vw, 85px);
+    font-weight: 800;
+
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.about-cta p {
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CTA BUTTONS
+========================================= */
+
+.cta-buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Orange button */
+
+.primary-button {
+    color: #ffffff;
+
+    background: var(--accent-color);
+
+    border: 1px solid var(--accent-color);
+}
+
+.primary-button:hover {
+    color: var(--primary-color);
+
+    background: #ffffff;
+
+    border-color: #ffffff;
+}
+
+
+/* Outline button */
+
+.secondary-button {
+    color: #ffffff;
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.secondary-button:hover {
+    color: var(--primary-color);
+
+    background: #ffffff;
+
+    border-color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-container,
+    .content-container,
+    .media-container,
+    .cta-container {
+        width: min(100% - 50px, 750px);
+    }
+
+
+    .service-grid,
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-service {
+        min-height: auto;
+    }
+
+
+    .approach-item {
+        min-height: auto;
+    }
+
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-intro,
+    .our-media,
+    .why-kikao {
+        padding: 100px 0;
+    }
+
+
+    .what-we-do,
+    .our-approach {
+        padding: 100px 0;
+    }
+
+
+    .about-intro h1,
+    .our-media h2,
+    .what-we-do h2,
+    .our-approach h2,
+    .why-kikao h2 {
+        letter-spacing: -2px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .about-container,
+    .content-container,
+    .media-container,
+    .cta-container {
+        width: calc(100% - 40px);
+    }
+
+
+    /* Who We Are */
+
+    .about-intro {
+        padding: 80px 0 90px;
+    }
+
+    .about-intro h1 {
+        margin-bottom: 30px;
+
+        font-size: clamp(38px, 11vw, 55px);
+
+        letter-spacing: -2px;
+    }
+
+    .about-intro .lead-text {
+        font-size: 17px;
+    }
+
+    .about-intro p {
+        font-size: 14px;
+    }
+
+
+    /* What We Do */
+
+    .what-we-do {
+        padding: 80px 0 90px;
+    }
+
+    .what-we-do h2,
+    .our-approach h2,
+    .why-kikao h2 {
+        margin-bottom: 45px;
+
+        font-size: clamp(38px, 10vw, 55px);
+
+        letter-spacing: -2px;
+    }
+
+
+    /* Service Cards */
+
+    .service-grid {
+        gap: 18px;
+    }
+
+    .about-service {
+        padding: 30px;
+
+        min-height: 0;
+    }
+
+    .about-service h3 {
+        font-size: 24px;
+    }
+
+
+    /* Our Media */
+
+    .our-media {
+        padding: 90px 0;
+    }
+
+    .our-media h2 {
+        margin-bottom: 35px;
+
+        font-size: clamp(40px, 11vw, 58px);
+
+        letter-spacing: -2px;
+    }
+
+    .our-media .lead-text {
+        font-size: 17px;
+    }
+
+    .our-media p {
+        font-size: 14px;
+    }
+
+
+    /* Approach */
+
+    .our-approach {
+        padding: 90px 0;
+    }
+
+    .approach-grid {
+        gap: 18px;
+    }
+
+    .approach-item {
+        padding: 30px;
+    }
+
+    .approach-item h3 {
+        font-size: 27px;
+    }
+
+
+    /* Why Kikao */
+
+    .why-kikao {
+        padding: 90px 0;
+    }
+
+    .why-grid {
+        gap: 18px;
+    }
+
+    .why-item {
+        padding: 30px;
+    }
+
+
+    /* CTA */
+
+    .about-cta {
+        padding: 90px 0;
+    }
+
+    .about-cta h2 {
+        font-size: clamp(42px, 12vw, 65px);
+
+        letter-spacing: -3px;
+    }
+
+    .about-cta p {
+        font-size: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .about-container,
+    .content-container,
+    .media-container,
+    .cta-container {
+        width: calc(100% - 30px);
+    }
+
+    .about-service,
+    .approach-item,
+    .why-item {
+        padding: 25px;
+    }
+
+}
+
+/* =========================================
+   KIKAO MEDIA GROUP
+   DATA PRIVACY PAGE
+========================================= */
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --privacy-primary: #01045d;
+    --privacy-accent: #ff4500;
+
+    --privacy-text: #111111;
+    --privacy-muted: #666666;
+
+    --privacy-background: #ffffff;
+    --privacy-light: #f7f7f7;
+
+    --privacy-border: #e5e5e5;
+
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+.privacy-container {
+
+    width: min(
+        calc(100% - 60px),
+        1200px
+    );
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.privacy-hero {
+
+    padding: 120px 0 100px;
+
+    background: var(--privacy-light);
+
+    border-bottom: 1px solid var(--privacy-border);
+
+}
+
+
+.privacy-eyebrow {
+
+    margin-bottom: 20px;
+
+    color: var(--privacy-accent);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.privacy-hero h1 {
+
+    max-width: 900px;
+
+    margin-bottom: 30px;
+
+    color: var(--privacy-primary);
+
+    font-size: clamp(
+        52px,
+        8vw,
+        110px
+    );
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+
+    line-height: 0.95;
+
+}
+
+
+.privacy-intro {
+
+    max-width: 650px;
+
+    color: var(--privacy-muted);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.privacy-content {
+
+    padding: 100px 0 140px;
+
+    background: var(--privacy-background);
+
+}
+
+
+/* =========================================
+   PRIVACY SECTION
+========================================= */
+
+.privacy-section {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 60px;
+
+    padding: 70px 0;
+
+    border-bottom: 1px solid var(--privacy-border);
+
+}
+
+
+.privacy-section:first-child {
+
+    padding-top: 0;
+
+}
+
+
+.privacy-section:last-child {
+
+    border-bottom: none;
+
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.privacy-number {
+
+    color: var(--privacy-accent);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   COPY
+========================================= */
+
+.privacy-copy {
+
+    max-width: 800px;
+
+}
+
+
+.privacy-copy h2 {
+
+    margin-bottom: 25px;
+
+    color: var(--privacy-primary);
+
+    font-size: clamp(
+        28px,
+        4vw,
+        48px
+    );
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    line-height: 1.1;
+
+}
+
+
+.privacy-copy p {
+
+    margin-bottom: 20px;
+
+    color: var(--privacy-text);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.privacy-copy ul {
+
+    margin: 25px 0;
+
+    padding-left: 22px;
+
+}
+
+
+.privacy-copy li {
+
+    margin-bottom: 13px;
+
+    padding-left: 5px;
+
+    color: var(--privacy-text);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+.privacy-copy strong {
+
+    color: var(--privacy-primary);
+
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.privacy-contact {
+
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background: var(--privacy-light);
+
+    border-left: 4px solid var(--privacy-accent);
+
+}
+
+
+.privacy-contact p {
+
+    margin-bottom: 8px;
+
+}
+
+
+.privacy-contact a {
+
+    color: var(--privacy-primary);
+
+    font-weight: 600;
+
+}
+
+
+.privacy-contact a:hover {
+
+    color: var(--privacy-accent);
+
+}
+
+
+/* =========================================
+   UPDATED DATE
+========================================= */
+
+.privacy-updated {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--privacy-border);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+
+    padding: 70px 0 25px;
+
+    background: var(--privacy-primary);
+
+    color: #ffffff;
+
+}
+
+
+.footer-container {
+
+    width: min(
+        calc(100% - 60px),
+        1200px
+    );
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+}
+
+
+.footer-brand {
+
+    max-width: 400px;
+
+}
+
+
+.footer-logo {
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.footer-brand p {
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px 30px;
+
+    align-content: flex-start;
+
+}
+
+
+.footer-links a {
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--privacy-accent);
+
+}
+
+
+.footer-bottom {
+
+    width: min(
+        calc(100% - 60px),
+        1200px
+    );
+
+    margin: 60px auto 0;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.15
+    );
+
+}
+
+
+.footer-bottom p {
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.6
+    );
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .privacy-container {
+
+        width: calc(100% - 40px);
+
+    }
+
+
+    .privacy-hero {
+
+        padding: 80px 0 70px;
+
+    }
+
+
+    .privacy-hero h1 {
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .privacy-content {
+
+        padding: 70px 0 90px;
+
+    }
+
+
+    .privacy-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 55px 0;
+
+    }
+
+
+    .privacy-number {
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .privacy-copy h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .privacy-copy p,
+    .privacy-copy li {
+
+        font-size: 15px;
+
+    }
+
+
+    .footer-container {
+
+        width: calc(100% - 40px);
+
+        flex-direction: column;
+
+        gap: 40px;
+
+    }
+
+
+    .footer-bottom {
+
+        width: calc(100% - 40px);
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 450px) {
+
+    .privacy-container {
+
+        width: calc(100% - 30px);
+
+    }
+
+
+    .privacy-hero {
+
+        padding: 65px 0 55px;
+
+    }
+
+
+    .privacy-hero h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -2.5px;
+
+    }
+
+
+    .privacy-intro {
+
+        font-size: 16px;
+
+    }
+
+
+    .privacy-content {
+
+        padding: 60px 0 80px;
+
+    }
+
+
+    .privacy-section {
+
+        padding: 45px 0;
+
+    }
+
+
+    .privacy-copy h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .privacy-contact {
+
+        padding: 22px;
+
+    }
+
+
+    .footer-container,
+    .footer-bottom {
+
+        width: calc(100% - 30px);
+
+    }
+
+}
+
+/* =========================================
+   HOMEPAGE INTRO
+========================================= */
+
+.intro-section {
+    padding: 130px 30px;
+    background: #ffffff;
+}
+
+.intro-container {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+.intro-container h1 {
+    max-width: 1000px;
+
+    margin-bottom: 35px;
+
+    color: var(--primary-color, #01045d);
+
+    font-size: clamp(50px, 8vw, 110px);
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+
+    line-height: 0.95;
+}
+
+.intro-lead {
+    max-width: 850px;
+
+    margin-bottom: 30px;
+
+    color: var(--primary-color, #01045d);
+
+    font-size: clamp(22px, 3vw, 34px);
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+.intro-text {
+    max-width: 780px;
+
+    margin-bottom: 20px;
+
+    color: #555555;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-section {
+    padding: 120px 30px;
+
+    background: #f7f7f7;
+}
+
+.services-container {
+    width: min(100%, 1200px);
+
+    margin: 0 auto;
+}
+
+.services-heading {
+    max-width: 850px;
+
+    margin-bottom: 70px;
+}
+
+.services-heading h2 {
+    color: #01045d;
+
+    font-size: clamp(42px, 6vw, 78px);
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    line-height: 1.05;
+}
+
+.services-heading h2 span {
+    color: #ff4500;
+}
+
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.service-card {
+    min-height: 330px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8e8;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.07);
+}
+
+.service-number {
+    margin-bottom: 45px;
+
+    color: #ff4500;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.service-card h3 {
+    margin-bottom: 20px;
+
+    color: #01045d;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.service-card p {
+    margin-top: auto;
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   MEDIA
+========================================= */
+
+.media-section {
+    padding: 130px 30px;
+
+    background: #ffffff;
+}
+
+.media-container {
+    width: min(100%, 1200px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+}
+
+.media-heading h2 {
+    color: #01045d;
+
+    font-size: clamp(40px, 5vw, 68px);
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    line-height: 1.05;
+}
+
+.media-content p {
+    margin-bottom: 25px;
+
+    color: #555555;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   WHY KIKAO
+========================================= */
+
+.why-section {
+    padding: 120px 30px;
+
+    background: #01045d;
+
+    color: #ffffff;
+}
+
+.why-container {
+    width: min(100%, 1200px);
+
+    margin: 0 auto;
+}
+
+.why-heading {
+    max-width: 800px;
+
+    margin-bottom: 70px;
+}
+
+.why-heading .section-eyebrow {
+    color: #ff4500;
+}
+
+.why-heading h2 {
+    color: #ffffff;
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    line-height: 1;
+}
+
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.why-item {
+    padding: 35px;
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.2
+    );
+}
+
+.why-number {
+    display: block;
+
+    margin-bottom: 45px;
+
+    color: #ff4500;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.why-item h3 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+}
+
+.why-item p {
+    color: rgba(
+        255,
+        255,
+        255,
+        0.7
+    );
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   PARTNERSHIP CTA
+========================================= */
+
+.partnership-section {
+    padding: 140px 30px;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.partnership-container {
+    width: min(100%, 900px);
+
+    margin: 0 auto;
+}
+
+.partnership-container h2 {
+    margin-bottom: 30px;
+
+    color: #01045d;
+
+    font-size: clamp(45px, 7vw, 90px);
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    line-height: 0.98;
+}
+
+.partnership-container > p:not(.section-eyebrow) {
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+    color: #666666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.primary-button {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #ff4500;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.primary-button:hover {
+    opacity: 0.85;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .media-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .why-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .intro-section {
+        padding: 85px 20px;
+    }
+
+    .intro-container h1 {
+        letter-spacing: -3px;
+    }
+
+    .services-section {
+        padding: 85px 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 290px;
+
+        padding: 28px;
+    }
+
+    .media-section {
+        padding: 85px 20px;
+    }
+
+    .why-section {
+        padding: 85px 20px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partnership-section {
+        padding: 90px 20px;
+    }
+
+    .partnership-container h2 {
+        letter-spacing: -3px;
+    }
+
+}
+
+/* =========================================
+   INNER PAGE INTRO
+========================================= */
+
+.page-intro {
+    padding: 130px 30px 100px;
+    background: #ffffff;
+}
+
+.page-intro-container {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+.page-intro h1 {
+    max-width: 1050px;
+
+    margin-bottom: 40px;
+
+    color: #01045d;
+
+    font-size: clamp(50px, 8vw, 105px);
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+
+    line-height: 0.96;
+}
+
+.page-intro-text {
+    max-width: 800px;
+
+    margin-bottom: 20px;
+
+    color: #555555;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   ENGAGEMENT
+========================================= */
+
+.engagement-section {
+    padding: 100px 30px;
+
+    background: #f7f7f7;
+}
+
+.engagement-container {
+    width: min(100%, 1200px);
+
+    margin: 0 auto;
+}
+
+.engagement-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.engagement-card {
+    min-height: 360px;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+}
+
+.engagement-number {
+    display: block;
+
+    margin-bottom: 70px;
+
+    color: #ff4500;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.engagement-card h2 {
+    max-width: 400px;
+
+    margin-bottom: 20px;
+
+    color: #01045d;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+.engagement-card p {
+    max-width: 600px;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   ENGAGEMENT VALUE
+========================================= */
+
+.engagement-value {
+    padding: 140px 30px;
+
+    background: #ffffff;
+}
+
+.engagement-value-container {
+    width: min(100%, 1000px);
+
+    margin: 0 auto;
+}
+
+.engagement-value h2 {
+    max-width: 950px;
+
+    margin-bottom: 35px;
+
+    color: #01045d;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    line-height: 0.98;
+}
+
+.engagement-value-container > p:last-child {
+    max-width: 700px;
+
+    color: #666666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CAREERS
+========================================= */
+
+.careers-section {
+    padding: 100px 30px;
+
+    background: #f7f7f7;
+}
+
+.careers-container {
+    width: min(100%, 1200px);
+
+    margin: 0 auto;
+}
+
+.careers-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.career-card {
+    min-height: 440px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+}
+
+.career-number {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: #ff4500;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.career-card h2 {
+    margin-bottom: 20px;
+
+    color: #01045d;
+
+    font-size: 28px;
+
+    line-height: 1.15;
+}
+
+.career-card p {
+    margin-bottom: 25px;
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.career-card ul {
+    padding-left: 18px;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+/* =========================================
+   CAREERS CULTURE
+========================================= */
+
+.careers-culture {
+    padding: 140px 30px;
+
+    background: #ffffff;
+}
+
+.careers-culture-container {
+    width: min(100%, 1000px);
+
+    margin: 0 auto;
+}
+
+.careers-culture h2 {
+    max-width: 950px;
+
+    margin-bottom: 35px;
+
+    color: #01045d;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    line-height: 0.98;
+}
+
+.careers-culture p:not(.section-eyebrow) {
+    max-width: 750px;
+
+    margin-bottom: 20px;
+
+    color: #666666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CONTENT / PLATFORMS
+========================================= */
+
+.platform-section {
+    padding: 100px 30px;
+
+    background: #f7f7f7;
+}
+
+.platform-container {
+    width: min(100%, 1200px);
+
+    margin: 0 auto;
+}
+
+.platform-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.platform-card {
+    min-height: 330px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.platform-number {
+    margin-bottom: 50px;
+
+    color: #ff4500;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.platform-card h2 {
+    margin-bottom: 20px;
+
+    color: #01045d;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.platform-card p {
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.platform-link {
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    color: #ff4500;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.platform-link:hover {
+    color: #01045d;
+}
+
+
+/* =========================================
+   PROGRAMMING
+========================================= */
+
+.programming-section {
+    padding: 130px 30px;
+
+    background: #ffffff;
+}
+
+.programming-container {
+    width: min(100%, 1200px);
+
+    margin: 0 auto;
+}
+
+.programming-heading {
+    max-width: 850px;
+
+    margin-bottom: 70px;
+}
+
+.programming-heading h2 {
+    color: #01045d;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    line-height: 1;
+}
+
+.programming-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.program-card {
+    padding: 30px;
+
+    border: 1px solid #e5e5e5;
+
+    background: #ffffff;
+}
+
+.program-card h3 {
+    margin-bottom: 15px;
+
+    color: #01045d;
+
+    font-size: 20px;
+}
+
+.program-card p {
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SIMPLE CTA
+========================================= */
+
+.simple-cta {
+    padding: 130px 30px;
+
+    background: #01045d;
+
+    text-align: center;
+}
+
+.simple-cta-container {
+    width: min(100%, 850px);
+
+    margin: 0 auto;
+}
+
+.simple-cta h2 {
+    margin-bottom: 30px;
+
+    color: #ffffff;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    line-height: 0.98;
+}
+
+.simple-cta p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+.simple-cta .primary-button {
+    display: inline-block;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .engagement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .careers-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .platform-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .programming-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-intro {
+        padding: 85px 20px 70px;
+    }
+
+    .page-intro h1 {
+        letter-spacing: -3px;
+    }
+
+    .engagement-section {
+        padding: 70px 20px;
+    }
+
+    .engagement-card {
+        min-height: auto;
+
+        padding: 30px;
+    }
+
+    .engagement-number {
+        margin-bottom: 50px;
+    }
+
+    .engagement-value {
+        padding: 85px 20px;
+    }
+
+    .engagement-value h2 {
+        letter-spacing: -3px;
+    }
+
+    .careers-section {
+        padding: 70px 20px;
+    }
+
+    .careers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .career-card {
+        min-height: auto;
+    }
+
+    .careers-culture {
+        padding: 85px 20px;
+    }
+
+    .careers-culture h2 {
+        letter-spacing: -3px;
+    }
+
+    .platform-section {
+        padding: 70px 20px;
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-card {
+        min-height: 280px;
+    }
+
+    .programming-section {
+        padding: 85px 20px;
+    }
+
+    .programming-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .simple-cta {
+        padding: 90px 20px;
+    }
+
+    .simple-cta h2 {
+        letter-spacing: -3px;
+    }
+
+}
