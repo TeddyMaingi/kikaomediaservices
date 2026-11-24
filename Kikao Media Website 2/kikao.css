@@ -905,7 +905,7 @@ a {
 .why-kikao {
     padding: 150px 0;
 
-    background: #01045d;
+    background: #ffffff;
 }
 
 .why-kikao h2 {
@@ -928,7 +928,7 @@ a {
 
     border: 1px solid #e5e5e5;
 
-    background: #ffffff;
+    background: #01045d;
 
     transition:
         border-color 0.3s ease,
